@@ -1,0 +1,25 @@
+{
+  "name": "web-minecraft-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server for web-minecraft",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaljaz/web-minecraft-proxy.git"
+  },
+  "keywords": [
+    "web",
+    "minecraft",
+    "proxy",
+    "client",
+    "server"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@misioxd/net-browserify": "^1.0.0",
+    "express": "^4.17.1"
+  }
+}
