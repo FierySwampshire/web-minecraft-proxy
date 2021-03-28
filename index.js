@@ -5,7 +5,12 @@ const netApi = require('@misioxd/net-browserify')
 const cors = require('cors')
 
 app.use(netApi({ allowOrigin: '*' }))
-app.use(cors())
+app.use(cors({
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: true,
+  optionsSuccessStatus: 204
+}))
 
 app.get('/', function (req, res) {
   res.send('Web-minecraft proxy server')
