@@ -2,8 +2,10 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 8080
 const netApi = require('@misioxd/net-browserify')
+const cors = require('cors')
 
 app.use(netApi({ allowOrigin: '*' }))
+app.use(cors())
 
 app.get('/', function (req, res) {
   res.send('Web-minecraft proxy server')
